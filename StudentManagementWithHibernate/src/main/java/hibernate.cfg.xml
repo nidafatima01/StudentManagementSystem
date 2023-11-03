@@ -1,0 +1,32 @@
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/studentmanagementsystem
+		</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+
+		<!-- JDBC connection pool settings -->
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<!-- Other Hibernate properties -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<mapping class="com.example.studentManagement.entity.Student" />
+		
+		<mapping class="com.example.studentManagement.entity.Course" />
+		<mapping
+			class="com.example.studentManagement.entity.Instructor" />
+		<mapping
+			class="com.example.studentManagement.entity.Enrollment" />
+			<mapping
+			class="com.example.studentManagement.entity.Employee" />
+			<mapping
+			class="com.example.studentManagement.entity.Feedback" />
+
+	</session-factory>
+</hibernate-configuration>
